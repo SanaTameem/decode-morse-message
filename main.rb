@@ -20,3 +20,8 @@ end
 def decode_word(morse_word)
   morse_word.split.map { |morse_chararacter| decode_char(morse_chararacter) }.join
 end
+
+# Method to decode a Morse code message
+def decode_msg(morse_msg)
+  morse_msg.split('   ').map { |morse_term| decode_word(morse_term) }.join(' ')
+end
