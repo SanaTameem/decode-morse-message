@@ -15,3 +15,8 @@ MORSE_CODE_DICTIONARY = {
 def decode_char(morse_char)
   MORSE_CODE_DICTIONARY[morse_char]
 end
+
+# Method to decode a Morse code word
+def decode_word(morse_word)
+  morse_word.split.map { |morse_chararacter| decode_char(morse_chararacter) }.join
+end
